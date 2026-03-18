@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "MiroFish - Động cơ Mô phỏng Đám đông Thông minh"
+  },
+  "nav": {
+    "github": "Truy cập trang chủ Github của chúng tôi"
+  },
+  "home": {
+    "tag": "Động cơ Trí tuệ Tập thể Đơn giản & Tổng quát",
+    "version": "/ v0.1-Bản xem trước",
+    "hero_title": "Tải lên bất kỳ báo cáo nào",
+    "hero_title_gradient": "Dự đoán tương lai ngay lập tức",
+    "hero_desc_1_prefix": "Ngay cả chỉ với một đoạn văn bản, ",
+    "hero_desc_1_mid": "có thể tự động tạo ra một thế giới song song gồm tới ",
+    "hero_desc_1_million": "hàng triệu Agent",
+    "hero_desc_1_post1": " dựa trên những hạt giống thực tế, và tìm được ",
+    "hero_desc_1_post2": "\"tối ưu địa phương\"",
+    "hero_desc_1_post3": " trong các tương tác nhóm phức tạp từ góc nhìn của Chúa.",
+    "hero_desc_2": "Tập duyệt tương lai trong đám đông Agent, để quyết định chiến thắng sau trăm trận",
+    "status_header": "Trạng thái hệ thống",
+    "status_title": "Sẵn sàng",
+    "status_desc": "Động cơ dự đoán đang ở trạng thái chờ và có thể tải lên nhiều dữ liệu phi cấu trúc để khởi tạo chuỗi mô phỏng",
+    "metric_cost": "Chi phí thấp",
+    "metric_cost_detail": "Trung bình $5 mỗi mô phỏng",
+    "metric_availability": "Tính khả dụng cao",
+    "metric_availability_detail": "Tối đa mô phỏng Agent hàng triệu",
+    "workflow_header": "Chuỗi quy trình",
+    "workflow_step_1_title": "Xây dựng đồ thị",
+    "workflow_step_1_desc": "Trích xuất hạt giống thực tế & Tiêm ký ức cá nhân và tập thể & Xây dựng GraphRAG",
+    "workflow_step_2_title": "Thiết lập môi trường",
+    "workflow_step_2_desc": "Trích xuất mối quan hệ thực thể & Tạo nhân vật & Tiêm thông số mô phỏng cấu hình môi trường Agent",
+    "workflow_step_3_title": "Bắt đầu mô phỏng",
+    "workflow_step_3_desc": "Mô phỏng song song hai nền tảng & Phân tích tự động các yêu cầu dự đoán & Cập nhật động bộ nhớ thời gian",
+    "workflow_step_4_title": "Tạo báo cáo",
+    "workflow_step_4_desc": "ReportAgent với bộ công cụ phong phú để tương tác sâu với môi trường được mô phỏng",
+    "workflow_step_5_title": "Tương tác sâu",
+    "workflow_step_5_desc": "Đối thoại với bất kỳ thực thể nào trong thế giới được mô phỏng & Đối thoại với ReportAgent",
+    "upload_label": "01 / Hạt giống thực tế",
+    "upload_formats": "Định dạng được hỗ trợ: PDF, MD, TXT",
+    "upload_drag": "Kéo các tệp để tải lên",
+    "upload_hint": "Hoặc nhấp để duyệt hệ thống tệp",
+    "input_divider": "Tham số đầu vào",
+    "prompt_label": ">_ 02 / Nhắc mô phỏng",
+    "prompt_placeholder": "// Sử dụng ngôn ngữ tự nhiên để nhập các yêu cầu mô phỏng hoặc dự đoán (ví dụ: Điều gì sẽ xảy ra nếu Đại học Vũ Hán công bố thông báo hủy bỏ một hình phạt nhất định?)",
+    "model_badge": "Động cơ: MiroFish-V1.0",
+    "start_button": "Khởi động động cơ",
+    "starting_button": "Khởi tạo..."
+  },
+  "history": {
+    "section_title": "Bản ghi mô phỏng",
+    "graph_build": "Xây dựng đồ thị",
+    "env_setup": "Thiết lập môi trường",
+    "analysis_report": "Báo cáo phân tích",
+    "files_more": "+{count} tệp",
+    "no_files": "Không có tệp",
+    "rounds": "{current}/{total} vòng",
+    "requirement": "Yêu cầu mô phỏng"
+  },
+  "step": {
+    "1_title": "Xây dựng đồ thị",
+    "2_title": "Thiết lập môi trường",
+    "3_title": "Bắt đầu mô phỏng",
+    "4_title": "Tạo báo cáo",
+    "5_title": "Tương tác sâu"
+  },
+  "step1": {
+    "ontology_generation": "Tạo thể thức",
+    "ontology_api": "POST /api/graph/ontology/generate",
+    "ontology_desc": "LLM phân tích nội dung tài liệu và yêu cầu mô phỏng, trích xuất hạt giống thực tế và tự động tạo cấu trúc thể thức thích hợp",
+    "analyzing": "Đang phân tích tài liệu...",
+    "completed": "Hoàn thành",
+    "processing": "Đang xử lý",
+    "pending": "Đang chờ",
+    "generated_entities": "LOẠI THỰC THỂ ĐÃ TẠO",
+    "generated_relations": "LOẠI QUAN HỆ ĐÃ TẠO",
+    "entity_type": "THỰC THỂ",
+    "relation_type": "QUAN HỆ",
+    "attributes": "THUỘC TÍNH",
+    "examples": "VÍ DỤ",
+    "connections": "KẾT NỐI"
+  },
+  "view_switcher": {
+    "graph": "Đồ thị",
+    "split": "Chế độ tách",
+    "workbench": "Bàn làm việc"
+  },
+  "status": {
+    "error": "Lỗi",
+    "ready": "Sẵn sàng",
+    "building_graph": "Xây dựng đồ thị",
+    "generating_ontology": "Tạo thể thức",
+    "initializing": "Khởi tạo"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "close": "Đóng",
+    "retry": "Thử lại"
+  }
+}

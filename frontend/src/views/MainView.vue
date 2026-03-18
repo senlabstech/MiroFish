@@ -8,14 +8,14 @@
       
       <div class="header-center">
         <div class="view-switcher">
-          <button 
-            v-for="mode in ['graph', 'split', 'workbench']" 
+          <button
+            v-for="mode in ['graph', 'split', 'workbench']"
             :key="mode"
             class="switch-btn"
             :class="{ active: viewMode === mode }"
             @click="viewMode = mode"
           >
-            {{ { graph: '图谱', split: '双栏', workbench: '工作台' }[mode] }}
+            {{ t(`view_switcher.${mode}`) }}
           </button>
         </div>
       </div>
@@ -77,6 +77,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import GraphPanel from '../components/GraphPanel.vue'
 import Step1GraphBuild from '../components/Step1GraphBuild.vue'
 import Step2EnvSetup from '../components/Step2EnvSetup.vue'
@@ -85,13 +86,20 @@ import { getPendingUpload, clearPendingUpload } from '../store/pendingUpload'
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
 
 // Layout State
 const viewMode = ref('split') // graph | split | workbench
 
 // Step State
-const currentStep = ref(1) // 1: 图谱构建, 2: 环境搭建, 3: 开始模拟, 4: 报告生成, 5: 深度互动
-const stepNames = ['图谱构建', '环境搭建', '开始模拟', '报告生成', '深度互动']
+const currentStep = ref(1) // 1: Graph Building, 2: Environment Setup, 3: Start Simulation, 4: Report Generation, 5: Deep Interaction
+const stepNames = computed(() => [
+  t('step.1_title'),
+  t('step.2_title'),
+  t('step.3_title'),
+  t('step.4_title'),
+  t('step.5_title')
+])
 
 // Data State
 const currentProjectId = ref(route.params.projectId)
@@ -130,11 +138,11 @@ const statusClass = computed(() => {
 })
 
 const statusText = computed(() => {
-  if (error.value) return 'Error'
-  if (currentPhase.value >= 2) return 'Ready'
-  if (currentPhase.value === 1) return 'Building Graph'
-  if (currentPhase.value === 0) return 'Generating Ontology'
-  return 'Initializing'
+  if (error.value) return t('status.error')
+  if (currentPhase.value >= 2) return t('status.ready')
+  if (currentPhase.value === 1) return t('status.building_graph')
+  if (currentPhase.value === 0) return t('status.generating_ontology')
+  return t('status.initializing')
 })
 
 // --- Helpers ---
@@ -159,11 +167,11 @@ const toggleMaximize = (target) => {
 const handleNextStep = (params = {}) => {
   if (currentStep.value < 5) {
     currentStep.value++
-    addLog(`进入 Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
+    addLog(`Entering Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
     
     // 如果是从 Step 2 进入 Step 3，记录模拟轮数配置
     if (currentStep.value === 3 && params.maxRounds) {
-      addLog(`自定义模拟轮数: ${params.maxRounds} 轮`)
+      addLog(`Custom simulation rounds: ${params.maxRounds}`)
     }
   }
 }
@@ -171,7 +179,7 @@ const handleNextStep = (params = {}) => {
 const handleGoBack = () => {
   if (currentStep.value > 1) {
     currentStep.value--
-    addLog(`返回 Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
+    addLog(`Back to Step ${currentStep.value}: ${stepNames[currentStep.value - 1]}`)
   }
 }
 

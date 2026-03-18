@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "MiroFish - 智能群体仿真引擎"
+  },
+  "nav": {
+    "github": "访问我们的Github主页"
+  },
+  "home": {
+    "tag": "简洁通用的群体智能引擎",
+    "version": "/ v0.1-预览版",
+    "hero_title": "上传任意报告",
+    "hero_title_gradient": "即刻推演未来",
+    "hero_desc_1_prefix": "即使只有一段文字，",
+    "hero_desc_1_mid": "也能基于其中的现实种子，全自动生成与之对应的至多",
+    "hero_desc_1_million": "百万级Agent",
+    "hero_desc_1_post1": "构成的平行世界。通过上帝视角注入变量，在复杂的群体交互中寻找动态环境下的",
+    "hero_desc_1_post2": "\"局部最优解\"",
+    "hero_desc_1_post3": "",
+    "hero_desc_2": "让未来在 Agent 群中预演，让决策在百战后胜出",
+    "status_header": "系统状态",
+    "status_title": "准备就绪",
+    "status_desc": "预测引擎待命中，可上传多份非结构化数据以初始化模拟序列",
+    "metric_cost": "低成本",
+    "metric_cost_detail": "常规模拟平均5$/次",
+    "metric_availability": "高可用",
+    "metric_availability_detail": "最多百万级Agent模拟",
+    "workflow_header": "工作流序列",
+    "workflow_step_1_title": "图谱构建",
+    "workflow_step_1_desc": "现实种子提取 & 个体与群体记忆注入 & GraphRAG构建",
+    "workflow_step_2_title": "环境搭建",
+    "workflow_step_2_desc": "实体关系抽取 & 人设生成 & 环境配置Agent注入仿真参数",
+    "workflow_step_3_title": "开始模拟",
+    "workflow_step_3_desc": "双平台并行模拟 & 自动解析预测需求 & 动态更新时序记忆",
+    "workflow_step_4_title": "报告生成",
+    "workflow_step_4_desc": "ReportAgent拥有丰富的工具集与模拟后环境进行深度交互",
+    "workflow_step_5_title": "深度互动",
+    "workflow_step_5_desc": "与模拟世界中的任意一位进行对话 & 与ReportAgent进行对话",
+    "upload_label": "01 / 现实种子",
+    "upload_formats": "支持格式: PDF, MD, TXT",
+    "upload_drag": "拖拽文件上传",
+    "upload_hint": "或点击浏览文件系统",
+    "input_divider": "输入参数",
+    "prompt_label": ">_ 02 / 模拟提示词",
+    "prompt_placeholder": "// 用自然语言输入模拟或预测需求（例.武大若发布撤销肖某处分的公告，会引发什么舆情走向）",
+    "model_badge": "引擎: MiroFish-V1.0",
+    "start_button": "启动引擎",
+    "starting_button": "初始化中..."
+  },
+  "history": {
+    "section_title": "推演记录",
+    "graph_build": "图谱构建",
+    "env_setup": "环境搭建",
+    "analysis_report": "分析报告",
+    "files_more": "+{count} 个文件",
+    "no_files": "暂无文件",
+    "rounds": "{current}/{total} 轮",
+    "requirement": "模拟需求"
+  },
+  "step": {
+    "1_title": "图谱构建",
+    "2_title": "环境搭建",
+    "3_title": "开始模拟",
+    "4_title": "报告生成",
+    "5_title": "深度互动"
+  },
+  "step1": {
+    "ontology_generation": "本体生成",
+    "ontology_api": "POST /api/graph/ontology/generate",
+    "ontology_desc": "LLM分析文档内容与模拟需求，提取出现实种子，自动生成合适的本体结构",
+    "analyzing": "正在分析文档...",
+    "completed": "已完成",
+    "processing": "生成中",
+    "pending": "等待",
+    "generated_entities": "GENERATED ENTITY TYPES",
+    "generated_relations": "GENERATED RELATION TYPES",
+    "entity_type": "ENTITY",
+    "relation_type": "RELATION",
+    "attributes": "ATTRIBUTES",
+    "examples": "EXAMPLES",
+    "connections": "CONNECTIONS"
+  },
+  "view_switcher": {
+    "graph": "图谱",
+    "split": "双栏",
+    "workbench": "工作台"
+  },
+  "status": {
+    "error": "Error",
+    "ready": "Ready",
+    "building_graph": "Building Graph",
+    "generating_ontology": "Generating Ontology",
+    "initializing": "Initializing"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "close": "关闭",
+    "retry": "重试"
+  }
+}

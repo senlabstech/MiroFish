@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "MiroFish - Intelligent Swarm Simulation Engine"
+  },
+  "nav": {
+    "github": "Visit our Github homepage"
+  },
+  "home": {
+    "tag": "Simple & General Collective Intelligence Engine",
+    "version": "/ v0.1-Preview",
+    "hero_title": "Upload any report",
+    "hero_title_gradient": "Predict the future instantly",
+    "hero_desc_1_prefix": "Even with just a single piece of text, ",
+    "hero_desc_1_mid": "can automatically generate a parallel world of up to ",
+    "hero_desc_1_million": "millions of Agents",
+    "hero_desc_1_post1": " based on seeds of reality, and find the ",
+    "hero_desc_1_post2": "\"local optimum\"",
+    "hero_desc_1_post3": " in complex group interactions from a god's perspective.",
+    "hero_desc_2": "Rehearse the future in the Agent swarm, let decisions triumph after a hundred battles",
+    "status_header": "System Status",
+    "status_title": "Ready to go",
+    "status_desc": "Prediction engine is on standby and can upload multiple unstructured data to initialize the simulation sequence",
+    "metric_cost": "Low Cost",
+    "metric_cost_detail": "Average $5 per simulation",
+    "metric_availability": "High Availability",
+    "metric_availability_detail": "Up to millions of Agent simulation",
+    "workflow_header": "Workflow Sequence",
+    "workflow_step_1_title": "Graph Building",
+    "workflow_step_1_desc": "Reality seed extraction & Individual and collective memory injection & GraphRAG construction",
+    "workflow_step_2_title": "Environment Setup",
+    "workflow_step_2_desc": "Entity relationship extraction & Character generation & Environment configuration Agent injection simulation parameters",
+    "workflow_step_3_title": "Start Simulation",
+    "workflow_step_3_desc": "Dual-platform parallel simulation & Automatic parsing of prediction requirements & Dynamic update of temporal memory",
+    "workflow_step_4_title": "Report Generation",
+    "workflow_step_4_desc": "ReportAgent with a rich toolset for deep interaction with the simulated environment",
+    "workflow_step_5_title": "Deep Interaction",
+    "workflow_step_5_desc": "Dialogue with any entity in the simulated world & Dialogue with ReportAgent",
+    "upload_label": "01 / Reality Seeds",
+    "upload_formats": "Supported formats: PDF, MD, TXT",
+    "upload_drag": "Drag files to upload",
+    "upload_hint": "Or click to browse file system",
+    "input_divider": "Input Parameters",
+    "prompt_label": ">_ 02 / Simulation Prompt",
+    "prompt_placeholder": "// Use natural language to input simulation or prediction requirements (e.g. What will happen if Wuhan University publishes an announcement to revoke a certain punishment?)",
+    "model_badge": "Engine: MiroFish-V1.0",
+    "start_button": "Start Engine",
+    "starting_button": "Initializing..."
+  },
+  "history": {
+    "section_title": "Simulation Records",
+    "graph_build": "Graph Building",
+    "env_setup": "Environment Setup",
+    "analysis_report": "Analysis Report",
+    "files_more": "+{count} more files",
+    "no_files": "No files",
+    "rounds": "{current}/{total} rounds",
+    "requirement": "Simulation requirement"
+  },
+  "step": {
+    "1_title": "Graph Building",
+    "2_title": "Environment Setup",
+    "3_title": "Start Simulation",
+    "4_title": "Report Generation",
+    "5_title": "Deep Interaction"
+  },
+  "step1": {
+    "ontology_generation": "Ontology Generation",
+    "ontology_api": "POST /api/graph/ontology/generate",
+    "ontology_desc": "LLM analyzes document content and simulation requirements, extracts reality seeds, and automatically generates appropriate ontology structure",
+    "analyzing": "Analyzing documents...",
+    "completed": "Completed",
+    "processing": "Processing",
+    "pending": "Pending",
+    "generated_entities": "GENERATED ENTITY TYPES",
+    "generated_relations": "GENERATED RELATION TYPES",
+    "entity_type": "ENTITY",
+    "relation_type": "RELATION",
+    "attributes": "ATTRIBUTES",
+    "examples": "EXAMPLES",
+    "connections": "CONNECTIONS"
+  },
+  "view_switcher": {
+    "graph": "Graph",
+    "split": "Split View",
+    "workbench": "Workbench"
+  },
+  "status": {
+    "error": "Error",
+    "ready": "Ready",
+    "building_graph": "Building Graph",
+    "generating_ontology": "Generating Ontology",
+    "initializing": "Initializing"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "retry": "Retry"
+  }
+}

@@ -6,18 +6,18 @@
         <div class="card-header">
           <div class="step-info">
             <span class="step-num">01</span>
-            <span class="step-title">模拟实例初始化</span>
+            <span class="step-title">Simulation Instance Init</span>
           </div>
           <div class="step-status">
-            <span v-if="phase > 0" class="badge success">已完成</span>
-            <span v-else class="badge processing">初始化</span>
+            <span v-if="phase > 0" class="badge success">Completed</span>
+            <span v-else class="badge processing">Initializing</span>
           </div>
         </div>
         
         <div class="card-content">
           <p class="api-note">POST /api/simulation/create</p>
           <p class="description">
-            新建simulation实例，拉取模拟世界参数模版
+            Create a new simulation instance and fetch simulation world parameter templates
           </p>
 
           <div v-if="simulationId" class="info-card">
@@ -35,7 +35,7 @@
             </div>
             <div class="info-row">
               <span class="info-label">Task ID</span>
-              <span class="info-value mono">{{ taskId || '异步任务已完成' }}</span>
+              <span class="info-value mono">{{ taskId || 'Async task completed' }}</span>
             </div>
           </div>
         </div>
@@ -46,41 +46,41 @@
         <div class="card-header">
           <div class="step-info">
             <span class="step-num">02</span>
-            <span class="step-title">生成 Agent 人设</span>
+            <span class="step-title">Generate Agent Profiles</span>
           </div>
           <div class="step-status">
-            <span v-if="phase > 1" class="badge success">已完成</span>
+            <span v-if="phase > 1" class="badge success">Completed</span>
             <span v-else-if="phase === 1" class="badge processing">{{ prepareProgress }}%</span>
-            <span v-else class="badge pending">等待</span>
+            <span v-else class="badge pending">Pending</span>
           </div>
         </div>
 
         <div class="card-content">
           <p class="api-note">POST /api/simulation/prepare</p>
           <p class="description">
-            结合上下文，自动调用工具从知识图谱梳理实体与关系，初始化模拟个体，并基于现实种子赋予他们独特的行为与记忆
+            Automatically calls tools to extract entities and relationships from the knowledge graph, initializes simulation agents, and assigns unique behaviors and memories based on reality seeds
           </p>
 
           <!-- Profiles Stats -->
           <div v-if="profiles.length > 0" class="stats-grid">
             <div class="stat-card">
               <span class="stat-value">{{ profiles.length }}</span>
-              <span class="stat-label">当前Agent数</span>
+              <span class="stat-label">Current Agents</span>
             </div>
             <div class="stat-card">
               <span class="stat-value">{{ expectedTotal || '-' }}</span>
-              <span class="stat-label">预期Agent总数</span>
+              <span class="stat-label">Expected Total Agents</span>
             </div>
             <div class="stat-card">
               <span class="stat-value">{{ totalTopicsCount }}</span>
-              <span class="stat-label">现实种子当前关联话题数</span>
+              <span class="stat-label">Reality Seeds Topics</span>
             </div>
           </div>
 
           <!-- Profiles List Preview -->
           <div v-if="profiles.length > 0" class="profiles-preview">
             <div class="preview-header">
-              <span class="preview-title">已生成的 Agent 人设</span>
+              <span class="preview-title">Generated Agent Profiles</span>
             </div>
             <div class="profiles-list">
               <div 
@@ -94,9 +94,9 @@
                   <span class="profile-username">@{{ profile.name || `agent_${idx}` }}</span>
                 </div>
                 <div class="profile-meta">
-                  <span class="profile-profession">{{ profile.profession || '未知职业' }}</span>
+                  <span class="profile-profession">{{ profile.profession || 'Unknown Profession' }}</span>
                 </div>
-                <p class="profile-bio">{{ profile.bio || '暂无简介' }}</p>
+                <p class="profile-bio">{{ profile.bio || 'No bio available' }}</p>
                 <div v-if="profile.interested_topics?.length" class="profile-topics">
                   <span 
                     v-for="topic in profile.interested_topics.slice(0, 3)" 
@@ -118,19 +118,19 @@
         <div class="card-header">
           <div class="step-info">
             <span class="step-num">03</span>
-            <span class="step-title">生成双平台模拟配置</span>
+            <span class="step-title">Generate Dual-Platform Config</span>
           </div>
           <div class="step-status">
-            <span v-if="phase > 2" class="badge success">已完成</span>
-            <span v-else-if="phase === 2" class="badge processing">生成中</span>
-            <span v-else class="badge pending">等待</span>
+            <span v-if="phase > 2" class="badge success">Completed</span>
+            <span v-else-if="phase === 2" class="badge processing">Generating</span>
+            <span v-else class="badge pending">Pending</span>
           </div>
         </div>
 
         <div class="card-content">
           <p class="api-note">POST /api/simulation/prepare</p>
           <p class="description">
-            LLM 根据模拟需求与现实种子，智能设置世界时间流速、推荐算法、每个个体的活跃时间段、发言频率、事件触发等参数
+            LLM intelligently configures world time flow, recommendation algorithms, activity schedules, posting frequency, and event triggers for each agent based on simulation requirements and reality seeds
           </p>
           
           <!-- Config Preview -->
@@ -139,40 +139,40 @@
             <div class="config-block">
               <div class="config-grid">
                 <div class="config-item">
-                  <span class="config-item-label">模拟时长</span>
-                  <span class="config-item-value">{{ simulationConfig.time_config?.total_simulation_hours || '-' }} 小时</span>
+                  <span class="config-item-label">Duration</span>
+                  <span class="config-item-value">{{ simulationConfig.time_config?.total_simulation_hours || '-' }} h</span>
                 </div>
                 <div class="config-item">
-                  <span class="config-item-label">每轮时长</span>
-                  <span class="config-item-value">{{ simulationConfig.time_config?.minutes_per_round || '-' }} 分钟</span>
+                  <span class="config-item-label">Per Round</span>
+                  <span class="config-item-value">{{ simulationConfig.time_config?.minutes_per_round || '-' }} min</span>
                 </div>
                 <div class="config-item">
-                  <span class="config-item-label">总轮次</span>
-                  <span class="config-item-value">{{ Math.floor((simulationConfig.time_config?.total_simulation_hours * 60 / simulationConfig.time_config?.minutes_per_round)) || '-' }} 轮</span>
+                  <span class="config-item-label">Total Rounds</span>
+                  <span class="config-item-value">{{ Math.floor((simulationConfig.time_config?.total_simulation_hours * 60 / simulationConfig.time_config?.minutes_per_round)) || '-' }}</span>
                 </div>
                 <div class="config-item">
-                  <span class="config-item-label">每小时活跃</span>
+                  <span class="config-item-label">Active/Hour</span>
                   <span class="config-item-value">{{ simulationConfig.time_config?.agents_per_hour_min }}-{{ simulationConfig.time_config?.agents_per_hour_max }}</span>
                 </div>
               </div>
               <div class="time-periods">
                 <div class="period-item">
-                  <span class="period-label">高峰时段</span>
+                  <span class="period-label">Peak Hours</span>
                   <span class="period-hours">{{ simulationConfig.time_config?.peak_hours?.join(':00, ') }}:00</span>
                   <span class="period-multiplier">×{{ simulationConfig.time_config?.peak_activity_multiplier }}</span>
                 </div>
                 <div class="period-item">
-                  <span class="period-label">工作时段</span>
+                  <span class="period-label">Work Hours</span>
                   <span class="period-hours">{{ simulationConfig.time_config?.work_hours?.[0] }}:00-{{ simulationConfig.time_config?.work_hours?.slice(-1)[0] }}:00</span>
                   <span class="period-multiplier">×{{ simulationConfig.time_config?.work_activity_multiplier }}</span>
                 </div>
                 <div class="period-item">
-                  <span class="period-label">早间时段</span>
+                  <span class="period-label">Morning Hours</span>
                   <span class="period-hours">{{ simulationConfig.time_config?.morning_hours?.[0] }}:00-{{ simulationConfig.time_config?.morning_hours?.slice(-1)[0] }}:00</span>
                   <span class="period-multiplier">×{{ simulationConfig.time_config?.morning_activity_multiplier }}</span>
                 </div>
                 <div class="period-item">
-                  <span class="period-label">低谷时段</span>
+                  <span class="period-label">Off-Peak Hours</span>
                   <span class="period-hours">{{ simulationConfig.time_config?.off_peak_hours?.[0] }}:00-{{ simulationConfig.time_config?.off_peak_hours?.slice(-1)[0] }}:00</span>
                   <span class="period-multiplier">×{{ simulationConfig.time_config?.off_peak_activity_multiplier }}</span>
                 </div>
